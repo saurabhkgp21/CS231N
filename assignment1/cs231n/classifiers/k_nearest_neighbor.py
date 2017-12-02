@@ -68,16 +68,9 @@ class KNearestNeighbor(object):
     for i in xrange(num_test):
       for j in xrange(num_train):
         dists[i,j] = np.sum(np.multiply((X[i]-self.X_train[j]),(X[i]-self.X_train[j])))
-        #####################################################################
-        # TODO:                                                             #
         # Compute the l2 distance between the ith test point and the jth    #
         # training point, and store the result in dists[i, j]. You should   #
         # not use a loop over dimension.                                    #
-        #####################################################################
-        # pass
-        #####################################################################
-        #                       END OF YOUR CODE                            #
-        #####################################################################
     return dists
 
   def compute_distances_one_loop(self, X):

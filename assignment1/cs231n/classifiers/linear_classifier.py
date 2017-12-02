@@ -43,8 +43,10 @@ class LinearClassifier(object):
       X_batch = None
       y_batch = None
 
-      X_batch = X[:batch_size]
-      y_batch  =y[:batch_size]
+
+      indices = np.random.choice(np.arange(num_train),batch_size)
+      X_batch = X[indices]
+      y_batch  =y[indices]
 
 
       #########################################################################
