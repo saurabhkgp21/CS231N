@@ -149,6 +149,7 @@ class KNearestNeighbor(object):
       # A list of length k storing the labels of the k nearest neighbors to
       # the ith test point.
       closest_y = []
+      # print(dists[i][:10])
       closest_y = self.y_train[np.argsort(dists[i])[:k]]
       # print("Printing closest labels",closest_y)
       #########################################################################

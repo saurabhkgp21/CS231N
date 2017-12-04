@@ -27,7 +27,7 @@ kValue = [1, 3, 5, 8, 10, 12, 15, 20, 50, 100]
 xTrain = np.array(np.split(xTrain,cvFold))
 yTrain = np.array(np.split(yTrain,cvFold))
 
-
+# kValue = [3]
 kAccuracies = []
 # print(xTrain)
 for ptr,k in enumerate(kValue):

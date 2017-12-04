@@ -42,6 +42,8 @@ regStrengths = xrange(0,200,50)
 cvFold = 5
 bestAccuracy = -1
 bestReg = -1
+print(xTrain)
+exit()
 for reg in regStrengths:
 	acc = np.array([])
 	X = np.array(np.split(xTrain,cvFold))
@@ -54,7 +56,7 @@ for reg in regStrengths:
 		xCurrent = np.reshape(xCurrent,(xTrain.shape[0] - xTrain.shape[0]/cvFold,xTrain.shape[1]))
 		yCurrent = np.reshape(yCurrent,(yTrain.shape[0] - yTrain.shape[0]/cvFold,))
 		softmax = linear_classifier.Softmax()
-		softmax.train(xCurrent,yCurrent,reg = k, verbose = True,num_iters = 1500,learning_rate = learning_rate)
+		softmax.train(xCurrent,yCurrent,reg = 0, verbose = True,num_iters = 1500,learning_rate = learning_rate)
 
 		yPredict = softmax.predict(xValid)
 		correct = np.sum(yPredict==yValid)
