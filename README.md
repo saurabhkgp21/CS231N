@@ -1,2 +1,2 @@
 # CS231N
-Assignments
+CS231N Assignments
